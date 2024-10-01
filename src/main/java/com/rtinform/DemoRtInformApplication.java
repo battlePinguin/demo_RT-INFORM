@@ -33,7 +33,7 @@ public class DemoRtInformApplication implements CommandLineRunner {
                 Object groovyObject = groovyClass.getDeclaredConstructor().newInstance();
 
                 Map<Integer, Integer> result = (Map<Integer, Integer>) groovyClass
-                    .getMethod("countOccurrences", int[].class)
+                    .getMethod("countArray", int[].class)
                     .invoke(groovyObject, exampleArray);
                 System.out.println(Arrays.toString(exampleArray) + " g-> " + result);
             } catch (Exception e) {
